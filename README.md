@@ -35,41 +35,49 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
-
 ## 1-Day = [Frist Day]
 
 Blog ve Post dosyalarim var burda genelikle dosya yolu onemli cunku dosya mimarisine(structure) mimarisine gore bazen icerik olsun yada link yolu ona gore hal ala biliyor.
 
 ORNEK vermek gerekirse.
 
-Blog dosyamda birtane bos details dosya var ve icinde blogsa ait bir tane dosyam [slug] var fakat ne garipse burda sluga gecis yaptigimizda yani 
+Blog dosyamda birtane bos details dosya var ve icinde blogsa ait bir tane dosyam [slug] var fakat ne garipse burda sluga gecis yaptigimizda yani
 
 yol link
 http://localhost:3001/post/%20BLogs%20nextJS%20Js333
 
-biz icerige soyle ulasa biliyoruz 
-      
+biz icerige soyle ulasa biliyoruz
+
       const blog = useParams();
 
       return <div>{params === undefined && null ? 'not found items' : blog.slug}</div>;
 
-  
-
 ama ne garipse postda bir tane bos dosya olusturmadan direk slug [slug] dosyasi acip benzerini yaptiginda linkteki gibi icerik aliyorsun
 
-yol link 
+yol link
 
 http://localhost:3001/post/About%20next%20Js333
 
-biz icerige soyle ulasa biliyoruz 
-      
+biz icerige soyle ulasa biliyoruz
+
       const params = useParams();
       const decodedInfo = decodeURIComponent(params.slug);
 
       return <div>{params === undefined && null ? 'not found items' : decodedInfo}</div>;
 
-eger burda biz decode kullanmaz isek linkin sonu bize icerik olarak donuyor 
+eger burda biz decode kullanmaz isek linkin sonu bize icerik olarak donuyor
 
 =>>>>>>> About%20next%20Js333
 
-bir tane dosya mimaride boyle rol oynuyor ! 
+bir tane dosya mimaride boyle rol oynuyor !
+
+
+
+
+## 2-Day = [Frist Day]
+
+bu derste nasil slugdan gelen yani linkdeki queryleri almayi ogrendik 
+bunun icin users dosyasini incelemeniz yeterli 
+useParams kullandik 
+
+Ders bu kadardi 

@@ -12,7 +12,7 @@ const BlogPage = () => {
                         <li style={{ listStyle: 'none' }} key={blog.id}>
                               <h2>{blog.title}</h2>
                               <p>{blog.content}</p>
-                              <Link href={"/post/ "+ blog.slug}>Info about</Link>
+                              <Link href={'/post/detail' + blog.slug}>Info about</Link>
                         </li>
                   ))}
             </div>
